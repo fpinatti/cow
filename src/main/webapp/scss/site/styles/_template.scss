@@ -1,0 +1,99 @@
+/*---------------
+MAIN STRUCTURE (TEMPLATE BASE)
+---------------
+*/
+html, body {
+  font-family: $fontFamily5;
+  font-size: $fontSize1;
+  color: $colorWhite;
+  background: $colorWhite;
+}
+
+img {
+  max-width: 100%;
+}
+
+.font1 {
+  font-family: $fontFamily1;
+}
+.font2 {
+  font-family: $fontFamily2;
+}
+.font3 {
+  font-family: $fontFamily3;
+}
+.font4 {
+  font-family: $fontFamily4;
+}
+.font5 {
+  font-family: $fontFamily5;
+}
+
+.container {
+  width: 100%;
+  //max-width: 960px;
+  margin: 0 auto;
+  //height: 100%;
+  background: none;
+  position: relative;
+  min-height: 220px;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*---------------
+GENERIC UTILITY CLASSES
+---------------
+*/
+
+/*--------------------
+Hides element content.
+Usefull for css sprite technique.
+Example: <h1 class="hidden it-logo">Coca-Cola - Abra a felicidade</h1>
+*/
+
+.hidden {
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  direction: ltr;
+}
+
+/*// --------------------
+Prevent break word
+Example: <p>FAÇA SEU LOGIN OU <span class="full-word">CADASTRE-SE</span></p>
+*/
+.full-word { white-space: nowrap; }
+
+/*--------------------
+Add ellipsis (...) when text is larger than it´s container
+Example: <p class="truncate">Olá, Pedro de Alcântara Francisco Antônio João Carlos Xavier de Paula Miguel</p>
+*/
+.truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*--------------------
+Tecnique for size correction on float elements
+Usefull when overflow:hidden is not possible.
+*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+@media only screen and (min-width: $break-mobile) {
+
+}

@@ -1,0 +1,54 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="Keywords" content="{{keywords}}" />
+<meta name="Description" content="{{description}}" />
+<meta name="robots" content="index,follow" />
+{{!-- Twitter meta-tags --}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CocaCola" />
+<meta name="twitter:creator" content="@CocaCola" />
+<meta name="twitter:domain" content="{{url}}" />
+<meta name="twitter:title" content="{{title}}" />
+{{#if og_twitter_description}}
+<meta name="twitter:description" content="{{og_twitter_description}}">
+{{/if}}
+{{#else}}
+<meta name="twitter:description" content="{{description}}">
+{{/else}}
+<meta name="twitter:image:src" content="{{image}}" />
+
+{{!-- Facebook (OpenGraph) meta-tags --}}
+<meta property="og:type" content="{{type}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:locale" content="{{locale}}" />
+<meta property="og:image" content="{{image}}">
+{{#if og_facebook_description}}
+<meta property="og:description" content="{{og_facebook_description}}">
+{{/if}}
+{{#else}}
+<meta property="og:description" content="{{description}}">
+{{/else}}
+
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon-apple-touch-152x152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon-apple-touch-144x144.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon-apple-touch-120x120.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon-apple-touch-114x114.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-apple-touch-76x76.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon-apple-touch-72x72.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon-apple-touch-60x60.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon-apple-touch-57x57.png">
+<link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/img/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16">
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/common_min.css" />
+<link rel="stylesheet" type="text/css" href="css/site_min.css" />

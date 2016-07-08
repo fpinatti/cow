@@ -1,0 +1,8 @@
+{
+  "static.baseurl": "http://localhost:8001/",
+  "service.baseurl": "http://localhost:8001/",
+  "facebook.appId": "1111",
+  "facebook.scopes": "1111",
+  "instagram.appId": "1111",
+  "googlemaps.key": "1111"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "COWBoilerplate",
+  "version": "0.0.1",
+  "description": "Frontend Boilerplate",
+  "info": {
+    "description": "SITE DESC",
+    "url": "SITE URL",
+    "title": "SITE TITLE",
+    "image": "image_share",
+    "og_twitter_description": "og twitter desc",
+    "og_facebook_description": "og fb description",
+    "keywords": "asdada asdasd",
+    "googleTagManager": ""
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "dependencies": {
+    "pageres": "^4.1.2",
+    "rimraf": "latest",
+    "stubby": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-compile-handlebars": "latest",
+    "gulp-concat": "latest",
+    "gulp-csslint": "latest",
+    "gulp-debug": "latest",
+    "gulp-eol": "latest",
+    "gulp-eslint": "latest",
+    "gulp-filter": "latest",
+    "gulp-if": "latest",
+    "gulp-minify": "0.0.12",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-sequence": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stats": "0.0.3",
+    "gulp-uglify": "latest",
+    "gulp-useref": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-util": "latest"
+  }
+}

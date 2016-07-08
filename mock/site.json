@@ -1,0 +1,66 @@
+[
+{
+  "request": {
+    "url": "/service1",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "success":true
+    }
+  }
+},
+{
+  "request": {
+    "url": "/service2",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "success":true
+    }
+  }
+},
+{
+  "request": {
+    "url": "/service3",
+    "method": "POST"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "success":true
+    }
+  }
+},
+{
+  "request": {
+    "url": "/service4",
+    "method": "POST",
+    "headers": {
+      "HTTP-Captcha": "1234"
+    },
+    "json": "{\"rootnode\":{\"param1\": \"value1\", \"param2\": \"value2\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "success":true
+    }
+  }
+}
+]
