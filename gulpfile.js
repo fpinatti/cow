@@ -79,9 +79,9 @@ gulp.task('eslint', function() {
     }))
     .pipe(plumber())
     .pipe(eslint.format("table"))
-    .pipe(eslint.failAfterError())
+    .pipe(eslint.failAfterError());
     //.pipe(notify({"onLast":true, message:"Eslint Completed"}))
-    .on('error', notify.onError({ message: 'There is a JS error, please look the console for details'}));
+    //.on('error', notify.onError({ message: 'There is a JS error, please look the console for details'}));
 });
 
 
@@ -94,7 +94,7 @@ gulp.task('css', function() {
       restore: true
     });
     gulp.src([srcDir + 'main/webapp/scss/' + arrFolders[i] + '/main.scss', srcDir + 'main/webapp/scss/' + arrFolders[i] + '/**/*.css'])
-      .pipe(plumber({errorHandler: notify.onError("Error CSS: <%= error.message %>")}))
+      .pipe(plumber())
       .pipe(debug({title: 'css:'}))
       //.pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
@@ -104,11 +104,12 @@ gulp.task('css', function() {
         browsers: autoPrefixBrowserList,
         cascade: true
       }))
-      .pipe(csslint())
-      .pipe(csslint.reporter('compact'))
       .pipe(f.restore)
       .pipe(cleanCSS())
       .pipe(concat(arrFolders[i] + '_min.css'))
+      .pipe(csslint('.csslintrc'))
+      .pipe(csslint.reporter('compact'))
+      .pipe(csslint.reporter('fail'))
       .pipe(gulp.dest(targetDir + 'css'))
       .pipe(browserSync.reload({
         stream: true
@@ -121,7 +122,7 @@ gulp.task('css', function() {
 gulp.task('handlebars', function() {
   return gulp.src(srcDir + 'main/webapp/html/templates/**/*')
     //.pipe(debug({title: 'Processing html:'}))
-    .pipe(plumber({errorHandler: notify.onError("Error Handlebars: <%= error.message %>")}))
+    .pipe(plumber())
     .pipe(handlebars({
       description: package.info.description,
       url: package.info.url,
