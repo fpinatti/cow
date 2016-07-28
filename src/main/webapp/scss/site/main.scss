@@ -1,14 +1,11 @@
 //
-@import '../common/typography/_fonts';
+@import '../common/typography/fonts';
 //
-// //@import '*.css';
 @import 'styles/variables';
 @import 'styles/template';
-//
-// // Components
+// Components
 @import 'styles/header';
 @import 'styles/nav';
-//
-// // APP
+// APP
 @import 'styles/footer';
 @import 'styles/errorPage';

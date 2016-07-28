@@ -4,6 +4,8 @@ Web applications boilerplate
 
 Cow é um boilerplate de arquivos e ferramentas para se ter de forma ágil a versão inicial de uma aplicação web rodando, utilizando um pipeline moderno de desenvolvimento.
 
+O foco principal dessa suite de plugins é garantir a qualidade de código produzido (html, css e js), com regras de estilização de código, a fim de normalizar e facilitar o entendimento entre equipes de desenvolvimento.
+
 ```bash
 git clone https://github.com/fpinatti/cow.git app
 cd app
@@ -130,6 +132,6 @@ O package Pageres é utilizado para capturar urls da aplicação, em resoluçõe
 A configuração das urls e demais parâmetros estão no arquivo Gulpfile.js, na task pageres.
 
 
-## Changes from 1.0
--
+## Changes from 28/07/16
+- added sass lint validation (missing fix all the styles that are producing warnings)
 -

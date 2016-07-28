@@ -8,7 +8,7 @@ var minify        = require('gulp-minify');
 var sass          = require('gulp-sass');
 var sourceMaps    = require('gulp-sourcemaps');
 var imagemin      = require('gulp-imagemin');
-var scsslint      = require('gulp-scss-lint');
+var sasslint      = require('gulp-sass-lint');
 var browserSync   = require('browser-sync');
 var autoprefixer  = require('gulp-autoprefixer');
 var gulpSequence  = require('gulp-sequence').use(gulp);
@@ -83,6 +83,19 @@ gulp.task('eslint', function() {
     //.pipe(notify({"onLast":true, message:"Eslint Completed"}))
     //.on('error', notify.onError({ message: 'There is a JS error, please look the console for details'}));
 });
+
+
+
+// running scsslint in scss files
+gulp.task('scsslint', function() {
+  return gulp.src([srcDir + 'main/webapp/scss/**/*.scss', '!' + srcDir + 'main/webapp/scss/**/*vendor*.scss'])
+    .pipe(sasslint({
+      configFile: 'scsslint.yaml'
+    }))
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError());
+});
+
 
 
 //compiling our SCSS files for deployment
@@ -232,7 +245,7 @@ gulp.task('mockServer', function() {
 
 //master task
 gulp.task('default', function(cb) {
-  return gulpSequence('mockServer', 'browserSync', ['cleanupTarget', 'cleanupTmp'], ['eslint', 'css', 'img', 'fonts', 'rootfiles'], 'minify', 'pageres', function() {
+  return gulpSequence('mockServer', 'browserSync', ['cleanupTarget', 'cleanupTmp'], ['eslint', 'scsslint', 'css', 'img', 'fonts', 'rootfiles'], 'minify', 'pageres', function() {
       gulp.watch(srcDir + 'main/webapp/js/**/*', ['eslint', 'handlebars', 'useref', 'minify']);
       gulp.watch(srcDir + 'main/webapp/scss/**/*', ['css', 'handlebars', 'useref', 'minify']);
       gulp.watch(srcDir + 'main/webapp/img/**', ['img']);
