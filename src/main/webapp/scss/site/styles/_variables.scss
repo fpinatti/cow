@@ -1,57 +1,26 @@
-/*---------------
-TYPOGRAPHY
----------------
-*/
-/*Base font (defaults)*/
-$fontFamily1: 'gothamblack', Arial, Verdana, Sans-Serif;
-$fontFamily2: 'gothambold', Arial, Verdana, Sans-Serif;
-$fontFamily3: 'gothambook', Arial, Verdana, Sans-Serif;
-$fontFamily4: 'gothammedium', Arial, Verdana, Sans-Serif;
-$fontFamily5: 'gothamlight', Arial, Verdana, Sans-Serif;
+$font-family1: 'gothamblack', Arial, Verdana, Sans-Serif;
+$font-family2: 'gothambold', Arial, Verdana, Sans-Serif;
+$font-family3: 'gothambook', Arial, Verdana, Sans-Serif;
+$font-family4: 'gothammedium', Arial, Verdana, Sans-Serif;
+$font-family5: 'gothamlight', Arial, Verdana, Sans-Serif;
 
-$fontSize1  : 14px;
-$fontSize2  : 9px;
-$fontSize3  : 12px;
-$fontSize4  : 18px;
-$fontSize5  : 22px;
+$font-size1: 14px;
+$font-size2: 9px;
+$font-size3: 12px;
+$font-size4: 18px;
+$font-size5: 22px;
 
-/*
-  COLORS
-*/
-$colorBaseRed: #e6292c;
-$colorBaseDarkRed: #bf0e10;
-$colorFbBlue: #3b55a0;
-$colorTwBlue: #62c8f8;
-$colorLight: #eeeeee;
-$colorMedium: #a4a4a4;
-$colorDarkLight: #797979;
-$colorDark: #343434;
-$colorMain: #dc0121;
-$colorBgModal: #252525;
-$colorBase: #83bd2a;
-$colorWhite: #ffffff;
-$colorBlack: #000000;
-
-
-/*
-  DIMENSIONS
-*/
-$min-mobile-width: 320px;
-$max-desktop-width: 960px;
-
-/*
-  BREAK-POINTS: [ MOBILE ]
-*/
-$break-mobile-small: 360px;
-$break-mobile-medium: 481px;
-$break-mobile: 737px;
-
-/*
-  BREAK-POINTS: [ TABLET ]
-*/
-$break-tablet: 769px;
-
-/*
-  BREAK-POINTS: [ DESKTOP ]
-*/
-$break-table-large: 1024px;
+//COLORS
+$color-base-red: #e6292c;
+$color-base-dark-red: #bf0e10;
+$color-fb-blue: #3b55a0;
+$color-tw-blue: #62c8f8;
+$color-light: #eee;
+$color-medium: #a4a4a4;
+$color-dark-light: #797979;
+$color-dark: #343434;
+$color-main: #dc0121;
+$color-bg-modal: #252525;
+$color-base: #83bd2a;
+$color-white: #fff;
+$color-black: #000;
