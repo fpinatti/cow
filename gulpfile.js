@@ -240,10 +240,10 @@ gulp.task('mockServer', function() {
 //master task
 gulp.task('default', function(cb) {
   return gulpSequence('mockServer', 'browserSync', ['cleanupTarget', 'cleanupTmp'], ['eslint', 'scsslint', 'css', 'img', 'fonts', 'rootfiles'], 'minify', 'pageres', function() {
-      gulp.watch(srcDir + 'main/webapp/js/**/*', ['eslint', 'handlebars', 'useref', 'minify']);
-      gulp.watch(srcDir + 'main/webapp/scss/**/*', ['css', 'handlebars', 'useref', 'minify']);
-      gulp.watch(srcDir + 'main/webapp/img/**', ['img']);
-      gulp.watch(srcDir + 'main/webapp/html/**/*', ['handlebars', 'useref', 'minify']);
+      gulp.watch(srcDir + 'main/webapp/js/**/*', { maxListeners: 999 }, ['eslint', 'handlebars', 'useref', 'minify']);
+      gulp.watch(srcDir + 'main/webapp/scss/**/*', { maxListeners: 999 }, ['css', 'handlebars', 'useref', 'minify']);
+      gulp.watch(srcDir + 'main/webapp/img/**', { maxListeners: 999 }, ['img']);
+      gulp.watch(srcDir + 'main/webapp/html/**/*', { maxListeners: 999 }, ['handlebars', 'useref', 'minify']);
       cb();
     }
 )});
