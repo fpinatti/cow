@@ -65,7 +65,6 @@ gulp.task('img', function() {
   gulp.src([srcDir + 'main/webapp/img/**/*'])
     .pipe(plumber())
     .pipe(imagemin())
-    //.pipe(imagemin())
     .pipe(gulp.dest(targetDir + 'img'));
 });
 
@@ -80,8 +79,6 @@ gulp.task('eslint', function() {
     .pipe(plumber())
     .pipe(eslint.format("table"))
     .pipe(eslint.failAfterError());
-    //.pipe(notify({"onLast":true, message:"Eslint Completed"}))
-    //.on('error', notify.onError({ message: 'There is a JS error, please look the console for details'}));
 });
 
 
@@ -121,8 +118,6 @@ gulp.task('css', function() {
       .pipe(cleanCSS())
       .pipe(concat(arrFolders[i] + '_min.css'))
       .pipe(csslint('.csslintrc'))
-      .pipe(csslint.reporter('compact'))
-      .pipe(csslint.reporter('fail'))
       .pipe(gulp.dest(targetDir + 'css'))
       .pipe(browserSync.reload({
         stream: true
@@ -194,7 +189,7 @@ gulp.task('fonts', function() {
 
 // copy root files
 gulp.task('rootfiles', function() {
-  return gulp.src(srcDir + 'main/webapp/2root/**/*')
+  return gulp.src(srcDir + 'main/webapp/rootfiles/**/*')
     .pipe(plumber())
     .pipe(gulp.dest(targetDir));
 });
@@ -231,7 +226,6 @@ gulp.task('pageres', function() {
 });
 
 gulp.task('mockServer', function() {
-  // site mock (use http://dev.citko.net:8001/)
   var mockSite = new Stubby();
   mockSite.start({
       data: require('./mock/site.json'),
